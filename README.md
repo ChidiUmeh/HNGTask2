@@ -13,6 +13,7 @@ app.get('/api/:id', async(req,res)=>{
     if (detail)
     return res.status(200).json({detail})
     return res.status(404).json({error:`No user with the id: ${id}`} )
+})
 ```
 
 ### Setting up and deploying an API locally
@@ -22,14 +23,12 @@ Install the dependecies by typing ```npm install express mongoose``` to install 
 In your package.json file, write the script, "start":"nodemon app.js".  
 In your app.js, require the dependencies and create the server by typing this code,  
 ```
-const mongoose = require("mongoose")
 const express = require("express")
 const app = express()
 then create a port
 port=5000
 
-mongoose.connect("mongodb://127.0.0.1:27017/(name of your database)")
-.then(()=>console.log("mongodb connected"))
+
 app.listen(port,()=>`Server listening on port ${port}`)
 ```
 To launch your server,run `npm start` in the terminal to get the following message
@@ -42,9 +41,7 @@ To launch your server,run `npm start` in the terminal to get the following messa
 [nodemon] watching path(s): *.*
 [nodemon] watching extensions: js,mjs,cjs,json
 [nodemon] starting `node app.js`
+
 Server listening on port 5000
-mongodb connected
 ```
 Finally, go to Chrome and enter localhost:5000/(endpoint) to test your APIs 
-
-`
