@@ -6,23 +6,22 @@ const cors = require('cors')
 const app = express()
 const route = require('./router/route')
 const {errorHandler} = require('./errorMiddleware/errorHandler')
-const {connectDB} = require('./model/schema')
+const connectDB= require('./db/db')
 port = process.env.PORT || 5000
 
 app.use(cors())
 app.use(route)
 app.use(errorHandler)
 
-connectDB()
 
 
-mongoose.connection.once('open',()=>{
-    console.log(`Connected to mongodb`)
-    app.listen(port,()=>console.log(`Server listening on port ${port}`))
+const start = async()=>{
+    try{
+        await connectDB(process.env.MONGO_URI)
+        app.listen(port,()=>console.log(`Server listening on port ${port}`))
+    }catch (error){
+        console.log(error)
+    }
 }
 
-) 
-
-
-
-
+start()
