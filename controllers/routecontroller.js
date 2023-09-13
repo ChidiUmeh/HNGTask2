@@ -3,7 +3,7 @@ const {details}= require('../model/schema')
 const signUp = async(req,res)=>{
     const detail = await details.create(req.body)
     console.log(detail)
-    return res.status(200).json({msg:"Created successfully"})   
+    return res.status(201).json({msg:"Created successfully",Location: `/api/${detail._id}`})   
 }
 
 const getUser = async(req,res)=>{
