@@ -4,7 +4,7 @@
 This is a REST API (Application Programming Interface) which performs Basic CRUD Operations and uses HTTP methods such as POST,GET PATCH and DELETE to add a new user, fetch the user's details, modify details of an existing user and delete the user's details.
 
 ### Endpoints, Routes, Standard formats and Status code
-Endpoints are functions available through the API. They perform specific function,taking some number of parameters and return data to the client. A route is the "name" you use to access endpoints used in the URL. The API responds with a structured response in JSON format. For instance, when a get request is made on the id parameter, the API responds with the user's details in the form of a JSON format if a user with the id exist and a status code of 200 meaning "OK" and if the user does not exist it returns error and the message "No user with the specified id exist" in the form of a json format and a status code of 404 meaning "Not found" like ine the sample below:  
+Endpoints are functions available through the API. They perform specific function,taking some number of parameters and return data to the client. A route is the "name" you use to access endpoints used in the URL. The API responds with a structured response in JSON format. For instance, when a get request is made on the id parameter, the API responds with the user's details in the form of a JSON format if a user with the id exist and a status code of 200 meaning "OK" and if the user does not exist it returns an error and the message "No user with the specified id exist" in the form of a json format and a status code of 404 meaning "Not found" like in the sample below:  
 
 ```
 app.get('/api/:id', async(req,res)=>{
