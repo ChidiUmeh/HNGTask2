@@ -8,9 +8,9 @@ const router = express.Router()
 router.use(express.json())
 
 
-router.post('/api', signUp )
+router.post('/',signUp )
 
-router.route('/api/:id').get(getUser).patch(updateUser).delete(deleteUser)
+router.route('/:id').get(getUser).patch(updateUser).delete(deleteUser)
 
 
 
