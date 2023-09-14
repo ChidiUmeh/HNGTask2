@@ -15,8 +15,8 @@ app.get('/api/:id', async(req,res)=>{
     return res.status(404).json({error:`No user with the id: ${id}`} )
 })
 ```
-### Use HTTP Methods to Operate on the Resources
-Use URLs to specify the resources you want to work with. Use the HTTP methods to specify what to do with this resource.
+### Use HTTP Methods to Operate on the Resources with Postman (A testing tool)
+Use URLs to specify the resources you want to work with. Use the HTTP methods to specify what to do with this resource and on postman, select the specific http method you need.
 * Read: Use GET for reading resources and it requires you to provide your id. You can access it through the endpoint `https://task2-xgz0.onrender.com/api/id` and by clicking on the link which is sent after you created an account.
 * Create: Use POST for creating new resources and it requires you to input your name in json format and send. You can access it through the endpoint `https://task2-xgz0.onrender.com/api`.
 * Update: Use PATCH for updating existing resources and it requires you to provide your id, edit the name you created in json format and send. You can access it through the endpoint `https://task2-xgz0.onrender.com/api/id`
