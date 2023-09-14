@@ -10,7 +10,7 @@ const connectDB= require('./db/dbconnect')
 port = process.env.PORT || 5000
 
 app.use(cors())
-app.use(route)
+app.use('/api',route)
 app.use(errorHandler)
 
 
