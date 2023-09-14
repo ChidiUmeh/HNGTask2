@@ -18,7 +18,7 @@ app.get('/api/:id', async(req,res)=>{
 ### Use HTTP Methods to Operate on the Resources
 Use URLs to specify the resources you want to work with. Use the HTTP methods to specify what to do with this resource.
 * Read: Use GET for reading resources.
-* Create: Use POST for creating nre resources.
+* Create: Use POST for creating new resources.
 * Update: Use PATCH for updating existing resources.
 * Delete: Use DELETE for deleting existing resources.
 
