@@ -17,10 +17,10 @@ app.get('/api/:id', async(req,res)=>{
 ```
 ### Use HTTP Methods to Operate on the Resources
 Use URLs to specify the resources you want to work with. Use the HTTP methods to specify what to do with this resource.
-* Read: Use GET for reading resources.
-* Create: Use POST for creating new resources.
-* Update: Use PATCH for updating existing resources.
-* Delete: Use DELETE for deleting existing resources.
+* Read: Use GET for reading resources and it requires you to provide your id. You can access it through the endpoint `https://task2-xgz0.onrender.com/api/id` and by clicking on the link which is sent after you created an account.
+* Create: Use POST for creating new resources and it requires you to input your name in json format and send. You can access it through the endpoint `https://task2-xgz0.onrender.com/api`.
+* Update: Use PATCH for updating existing resources and it requires you to provide your id, edit the name you created in json format and send. You can access it through the endpoint `https://task2-xgz0.onrender.com/api/id`
+* Delete: Use DELETE for deleting existing resources and you can only delete it by providing your id.You can access it through the endpoint `https://task2-xgz0.onrender.com/api/id`
 
 ### Setting up and deploying an API locally
 Create a folder with your app name and create a file with `app.js`.  
@@ -50,4 +50,6 @@ To launch your server,run `npm start` in the terminal to get the following messa
 
 Server listening on port 5000
 ```
-Finally, go to postman and enter localhost:5000/(endpoint) to test your APIs 
+Finally, go to postman and enter localhost:5000/endpoint to test the API endpoints.   
+
+
